@@ -216,7 +216,20 @@ exports.updateProfile = catchAsyncErrors(async (req, res, next) => {
         success: true,
     });
 });
+// add to cart
+exports.addToCart = catchAsyncErrors(async (req, res, next) => {
+    const newUserData = {...req.body};
+    const user = await User.findByIdAndUpdate(req.body._id, newUserData, {
+        new: true,
+        runValidators: true,
+        useFindAndModify: false
+    });
 
+    res.status(200).json({
+        success: true,
+        user
+    });
+});
 // Get all users -- admin
 exports.getAllUser = catchAsyncErrors(async(req, res, next) => {
     const users = await User.find();

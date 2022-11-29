@@ -19,6 +19,7 @@ import {
 } from "@material-ui/core";
 import { Rating } from "@material-ui/lab";
 import { NEW_REVIEW_RESET } from '../../constants/productConstants';
+import axios from 'axios';
 
 const ProductDetails = () => {
   const dispatch = useDispatch();
@@ -26,8 +27,9 @@ const ProductDetails = () => {
   const alert = useAlert();
 
   const {product, loading, error} = useSelector((state) => state.productDetails);
+  console.log(product);
   const { success, error: reviewError } = useSelector((state) => state.newReview);
-
+  const {user} = useSelector(state => state.user)
   const options = {
     size: "medium",
     value: product.ratings,
@@ -53,10 +55,22 @@ const ProductDetails = () => {
     const qty = quantity - 1;
     setQuantity(qty);
   };
-
-  const addToCartHandler = () => {
-    dispatch(addItemsToCart(id, quantity));
-    alert.success("Item Added To Cart");
+  const addToCartHandler = async() => {
+    // dispatch(addItemsToCart(id, quantity));
+   
+    const flag = user.listCarts.some(e => e.product === id)
+    if(!flag){
+      const newCart = [...user.listCarts,{product : id,name :product.name,price : product.price,image : product.images[0].url  , quantity : quantity}]
+      const newUser = {...user,listCarts : newCart}
+     await axios.put("/api/v1/addToCart",newUser).then(res => {
+        dispatch({type : "ADD_TO_CART_USER",payload : res.data.user})
+      })
+      alert.success("Item Added To Cart");
+    }
+    else{
+      alert.error("Item is Exist in your cart")
+    }
+   
   };
 
   const submitReviewToggle = () => {
@@ -187,7 +201,7 @@ const ProductDetails = () => {
             <div className="reviews">
               {product.reviews &&
                 product.reviews.map((review) => (
-                  <ReviewCard review={review}/>
+                  <ReviewCard key={review._id} review={review}/>
                 ))}
             </div>
           ) : (

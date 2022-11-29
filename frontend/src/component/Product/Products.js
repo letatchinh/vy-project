@@ -13,7 +13,7 @@ import MetaData from "../layout/MetaData";
 import axios from 'axios';
 // import { getAllCategories } from "../../actions/categoryAction";
 
-// const categories = [ // bạn tạo categroty băng admin nó se nằm ở đâu , cái data bạn tạo nằm ở đâu
+// const categories = [ 
 //     "Gift Sets",
 //     "Candle Accessories",
 //     "Scented Candle",
@@ -33,7 +33,6 @@ const Products = () => {
     const [ratings, setRatings] = useState(0)
     const [priceFilter,setPriceFilter] = useState([0,2500])
     const {loading, error, products, productsCount, resultPerPage} = useSelector((state)=>state.products);
-    console.log(products,'products')
     const setCurrentPageNo = (e) => {
         setCurrentPage(e)
     }
@@ -55,12 +54,10 @@ const Products = () => {
         dispatch(getProduct(keyword, currentPage,  priceFilter, category, ratingFilter));
         
     }, [dispatch,keyword, currentPage,  priceFilter, category, ratingFilter]);
-    console.log("xao")
     useEffect(() => {
      const res = getData()
       res.then(response => setCategories(response.data.categories))
     },[]) 
-    console.log(categories)
     return (
         <Fragment>
             {loading ? (

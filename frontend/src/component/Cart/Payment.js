@@ -32,14 +32,15 @@ const Payment = () => {
     const { shippingInfo, cartItems } = useSelector((state) => state.cart);
     const { user } = useSelector((state) => state.user);
     const { error } = useSelector((state) => state.newOrder);
-
+    const listCarts = useSelector((state) => state.user.user.listCarts) || []
+    console.log(listCarts,'listCarts');
     const paymentData = {
         amount: Math.round(orderInfo.totalPrice * 100),
     };
 
     const order = {
         shippingInfo,
-        orderItems: cartItems,
+        orderItems: listCarts,
         itemsPrice: orderInfo.subtotal,
         taxPrice: orderInfo.tax,
         shippingPrice: orderInfo.shippingCharges,

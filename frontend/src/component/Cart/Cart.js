@@ -11,7 +11,8 @@ const Cart = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { cartItems } = useSelector((state) => state.cart);
-
+    const listCarts = useSelector((state) => state.user.user.listCarts) || []
+    console.log(listCarts);
     const increaseQuantity = (id, quantity, stock) => {
         const newQty = quantity + 1;
         if (stock <= quantity) {
@@ -38,7 +39,7 @@ const Cart = () => {
 
     return (
         <Fragment>
-            {cartItems.length === 0 ? (
+            {listCarts.length === 0 ? (
                 <div className="emptyCart">
                     <RemoveShoppingCartIcon />
                     <br/>
@@ -54,11 +55,11 @@ const Cart = () => {
                             <p>Subtotal</p>
                         </div>
 
-                        {cartItems &&
-                            cartItems.map((item) => (
+                        {listCarts &&
+                            listCarts.map((item) => (
                                 <div className="cartContainer" key={item.product}>
                                     <CartItemCard item={item} deleteCartItems={deleteCartItems} />
-                                    <div className="cartInput">
+                                    {/* <div className="cartInput">
                                         <button onClick={() => decreaseQuantity(item.product, item.quantity)}>
                                             -
                                         </button>
@@ -71,7 +72,7 @@ const Cart = () => {
                                         {`$${
                                             item.price * item.quantity
                                         }`}
-                                    </p>
+                                    </p> */}
                                 </div>
                             )
                         )}
@@ -80,7 +81,7 @@ const Cart = () => {
                         <div></div>
                         <div className="cartGrossProfitBox">
                             <p>Gross Total</p>
-                            <p>{`$${cartItems.reduce(
+                            <p>{`$${listCarts.reduce(
                             (acc, item) => acc + item.quantity * item.price,
                             0
                             )}`}</p>

@@ -10,7 +10,7 @@ const { isAuthenticatedUser, authorizeRoles } = require("../middleware/auth");
 
 router
   .route("/admin/category")
-  .get(isAuthenticatedUser, authorizeRoles("admin", "staff"), getAllcategorys)
+  .get(isAuthenticatedUser,getAllcategorys)
   .post(isAuthenticatedUser, authorizeRoles("admin", "staff"), newcategory);
 
 router

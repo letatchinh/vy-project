@@ -12,6 +12,7 @@ const {
   getSingleUser,
   updateUserRole,
   deleteUser,
+  addToCart,
 } = require("../controllers/userController");
 const router = express.Router();
 const { isAuthenticatedUser, authorizeRoles } = require("../middleware/auth");
@@ -33,6 +34,7 @@ router.route("/password/update").put(isAuthenticatedUser, updatePassword);
 // Profile
 router.route("/me").get(isAuthenticatedUser, getUserDetails);
 router.route("/me/update").put(isAuthenticatedUser, updateProfile);
+router.route("/addToCart").put(addToCart);
 
 // Admin -- Get user
 router

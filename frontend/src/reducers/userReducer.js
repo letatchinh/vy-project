@@ -60,7 +60,11 @@ export const userReducer = (state={ user:{} }, action) => {
                 isAuthenticated: true,
                 user: action.payload
             };
-        
+        case "ADD_TO_CART_USER":{
+            return {
+                ...state,user : action.payload
+            }
+        }
         case LOGOUT_SUCCESS:
             return {
                 loading: false,
