@@ -1,0 +1,169 @@
+.newProductContainer {
+    width: 100%;
+    box-sizing: border-box;
+    /* background-color: rgb(221, 221, 221); */
+    background-image: linear-gradient(
+        to bottom right,
+        /* rgb(78, 81, 255),
+        rgb(74, 137, 189) */
+        rgb(25, 107, 105),
+        rgb(221, 254, 228)
+      );
+    border-left: 1px solid rgba(0, 0, 0, 0.158);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.newProductContainer h1 {
+    /* color: rgba(0, 0, 0, 0.733); */
+    color: #000;
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: "Mulish", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.createProductForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 3vmax;
+    justify-content: space-evenly;
+    height: 70%;
+    width: 50vh;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+}
+
+/* Position options */
+.createProductForm > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+/* Options content */
+.createProductForm > div > input,
+.createProductForm > div > select,
+.createProductForm > div > textarea{
+    padding: 1vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 4px;
+    font-size: 0.9vmax;
+    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    resize: none;
+}
+/* Icon */
+.createProductForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+/*   --------------------------------------
+    |                IMAGE                 |                            
+     --------------------------------------
+*/
+/* import img overview */
+#createProductFormFile > input {
+    display: flex;
+    padding: 0%;
+}
+#createProductFormFile > input::file-selector-button {
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    height: 5vh;
+    border: none;
+    margin: 0%;
+    font-size: 1vmax;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5s;
+    padding: 0 1vmax;
+    color: rgba(0, 0, 0, 0.623);
+    background-color: rgb(255, 255, 255);
+}
+#createProductFormFile > input::file-selector-button:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+/*   --------------------------------------
+    |              SUBMIT BTN              |                            
+     --------------------------------------
+*/
+#createProductFormImage {
+    width: 100%;
+    overflow: auto;
+}
+#createProductFormImage > img {
+    width: 3vmax;
+    /* border-radius: 100%;
+    margin-right: 0.6vmax; */
+    margin: 0 0.5vmax;
+}
+#createProductBtn {
+    color: white;
+    text-transform: uppercase;
+    background-color: #196B69;
+    /* border: 2px solid #6D9886; */
+    font-weight: 300;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    padding: 0.8vmax;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+#createProductBtn:hover {
+    /* color: white;
+    background-color: #6D9886; */
+    scale: 1.05;
+}
+  
+@media screen and (max-width: 600px) {
+    .newProductContainer {
+        background-color: rgb(255, 255, 255);
+    }
+    .createProductForm {
+        padding: 2vmax;
+    }
+    /* Options content */
+    .createProductForm > div > input,
+    .createProductForm > div > select,
+    .createProductForm > div > textarea{
+        padding: 2.5vmax 5vmax;
+        font-size: 1.7vmax;
+    }
+    /* Icon */
+    .createProductForm > div > svg {
+        font-size: 2.8vmax;
+    }
+
+    #createProductFormFile > img {
+        width: 8vmax;
+        border-radius: 100%;
+    }
+    #createProductFormFile > input::file-selector-button {
+        height: 7vh;
+        font-size: 2vmax;
+    }
+    #createProductBtn {
+        font-size: 1.9vmax;
+        padding: 1.8vmax;
+    }
+}
+  
+  
+  
+  

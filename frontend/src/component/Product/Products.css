@@ -1,0 +1,145 @@
+/*   --------------------------------------
+    |               OVERVIEW               |                            
+     --------------------------------------
+*/
+/* Title */
+.productsHeading {
+  margin: 0vmax auto;
+  width: 15vw;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+  padding: 2vmax;
+  color: rgba(0, 0, 0, 0.678);
+  font-weight: 600;
+  font-size: 2.6vmax;
+  font-family: "Mulish", sans-serif;
+  text-align: center;
+  /* margin-top: 2vmax; */
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+/* Position */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5vmax 0 24vmax;
+  /* justify-content: center; */
+  justify-content: flex-start;
+  min-height: 30vh;
+}
+
+/*   --------------------------------------
+    |             PAGINATION               |                            
+     --------------------------------------
+*/
+/* Overview */
+.paginationBox {
+  display: flex;
+  justify-content: center;
+  padding: 6vmax;
+}
+/* Position */
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+/* Style pagination box */
+.page-item {
+  background-color: white;
+  list-style: none;
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  padding: 1vmax 1.5vmax;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+/* Box 1st */
+.page-item:first-child {
+  border-radius: 5px 0 0 5px;
+}
+/* Box Last */
+.page-item:last-child {
+  border-radius: 0 5px 5px 0;
+}
+/* Text link */
+.page-link {
+  text-decoration: none;
+  font-size: 0.9vmax;
+  font-weight: 300;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  transition: all 0.3s;
+}
+.page-item:hover:not(.pageItemActive) {
+  background-color: #6D9886;
+}
+.page-item:hover .page-link {
+  color: white;
+}
+/* Select page */
+.pageItemActive {
+  background-color: #196B69;
+}
+.pageLinkActive {
+  color: white;
+}
+
+/*   --------------------------------------
+    |        PRICE RANGE + CATEGORY        |                            
+     --------------------------------------
+*/
+/* Price range overview */
+.filterBox {
+  width: 9.5vmax;
+  position: absolute;
+  top: 14vmax;
+  left: 6vmax;
+  color: black;
+}
+.categoryBox {
+  padding: 0%;
+}
+.category-link {
+  list-style: none;
+  /* color: rgba(0, 0, 0, 0.61); */
+  font-weight: 400;
+  font-size: 0.9vmax;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 1vmax 0.6vmax ;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.category-link:hover {
+  font-weight: 600;
+  color: #196B69;
+}
+
+/*   --------------------------------------
+    |              RATING RANGE            |                            
+     --------------------------------------
+*/
+.filterBox > fieldset {
+  border: 1px solid rgba(0, 0, 0, 0.329);
+}
+
+
+@media screen and (max-width: 600px) {
+  /* Text link */
+  .page-link {
+    font-size: 1.7vmax;
+    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  /* Price range overview */
+  .filterBox {
+    width: 25vmax;
+    position: static;
+    margin: auto;
+  }
+  /* Category list */
+  .category-link {
+    font-size: 1.8vmax;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}

@@ -1,0 +1,84 @@
+.confirmshippingArea{
+    padding: 4vmax;
+    padding-left: 4vmax;
+    padding-right: 4vmax;
+    padding-bottom: 0%;
+}
+.confirmshippingArea > p{
+    font-weight: 600;
+    font-size: 2vmax;
+    font-family: "Mulish", sans-serif;
+    text-transform: uppercase;
+}
+._confirmCartItems {
+    padding: 2vmax;
+}
+._confirmCartItems p{
+    border-top: 2px solid rgb(166, 166, 166);
+    font-weight: 600;
+    font-size: 1.6vmax;
+    font-family: "Mulish", sans-serif;
+    text-transform: uppercase;
+    padding-top: 2rem;
+}
+.updateOrderForm {
+    margin: 5vmax 0;
+    padding: 3vmax;
+    background-color: white;
+}
+
+
+/* Position options */
+.updateOrderForm > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+/* Options content */
+.updateOrderForm > div > select{
+    padding: 1vmax 4vmax;
+    margin: 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 4px;
+    font-weight: 300;
+    font-size: 0.9vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+}
+/* Icon */
+.updateOrderForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+@media screen and (max-width: 600px) {
+    .confirmshippingArea > p {
+        font-size: 3vmax;
+    }
+    ._confirmCartItems p{
+        font-size: 2.6vmax;
+    }
+    .newProductContainer {
+        background-color: rgb(255, 255, 255);
+    }
+    .updateOrderForm {
+        padding: 5vmax;
+    }
+    /* Options content */
+    .updateOrderForm > div > select{
+        padding: 2.5vmax 5vmax;
+        font: 300 1.7vmax cursive;
+    }
+    /* Icon */
+    .updateOrderForm > div > svg {
+        font-size: 2.8vmax;
+    }
+}
+  
+  
+  
+  

@@ -1,0 +1,194 @@
+/*   --------------------------------------
+    |              OVERVIEW                |                            
+     --------------------------------------
+*/
+/* Position */
+.updateProfileContainer{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(231, 231, 231); */
+    /* position: fixed; */
+    background-image: linear-gradient(
+      to bottom right,
+      rgb(25, 107, 105),
+      rgb(221, 254, 228)
+    );
+    top: 0%;
+    left: 0;
+}
+/* updateProfile Form */
+.updateProfileBox{
+    background-color: white;
+    width: 25vw;
+    height: 70vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translateY(-1rem);
+}
+
+/*   --------------------------------------
+    |                 FORM                 |                            
+     --------------------------------------
+*/
+/* Position form content */
+.updateProfileForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 1.4vmax;
+    justify-content: space-evenly;
+    height: 70%;
+    transition: all 0.5s;
+}
+.updateProfileHeading{
+    text-align: center;
+    font-size: 1.7vmax;
+    font-weight: 600;
+    font-family: "Mulish", sans-serif;
+    padding: 1.3vmax;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    width: 80%;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+/* Position options */
+.updateProfileForm > div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 0.5vmax;
+}
+/* Options content */
+.updateProfileForm > div > input{
+    padding: 1vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 4px;
+    font-weight: 300;
+    font-size: 0.9vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+}
+/* Icon */
+.updateProfileForm > div > svg{
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+/*   --------------------------------------
+    |                IMAGE                 |                            
+     --------------------------------------
+*/
+#updateProfileImage > img{
+    width: 3vmax;
+    border-radius: 100%;
+    /* margin-right: 0.6vmax; */
+    margin: 1vmax;
+}
+/* import img overview */
+#updateProfileImage > input{
+    display: flex;
+    padding: 0%;
+}
+#updateProfileImage > input::file-selector-button{
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    height: 5vh;
+    border: none;
+    margin: 0%;
+    font-weight: 400;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5s;
+    padding: 0 1vmax;
+    color: rgba(0, 0, 0, 0.623);
+    background-color: rgb(255, 255, 255);
+}
+#updateProfileImage > input::file-selector-button:hover{
+    background-color: rgb(235, 235, 235);
+}
+
+/*   --------------------------------------
+    |              SUBMIT BTN              |                            
+     --------------------------------------
+*/
+.updateProfileBtn{
+    color: white;
+    text-transform: uppercase;
+    background-color: #196B69;
+    /* border: 2px solid #6D9886; */
+    border: none;
+    font-size: 0.9vmax;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    padding: 0.9vmax;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+    letter-spacing: 2px;
+}
+.updateProfileBtn:hover{
+    scale: 1.05;
+}
+
+@media screen and (max-width: 600px){
+    /* Position */
+    .updateProfileContainer{
+        background-color: white;
+    }
+    /* updateProfile Form */
+    .updateProfileBox{
+        width: 100vw;
+        height: 100vh;
+    }
+    /* Heading */
+    .updateProfileHeading{
+        font-size: 3.8vmax;
+        margin-top: 4vmax;
+    }
+    /* Position form content */
+    .updateProfileForm{
+      padding: 5vmax;
+      transform: translateY(-4vmax);
+    }
+    /* Options content */
+    .updateProfileForm > div > input{
+      padding: 2.5vmax 5vmax;
+      font-size: 1.8vmax;
+    }
+    /* Icon */
+    .updateProfileForm > div > svg{
+      font-size: 2.8vmax;
+    }
+    /* Forgot password */
+    #updateProfileImage > img{
+        width: 8vmax;
+        border-radius: 100%;
+    }
+    #updateProfileImage > input::file-selector-button{
+        height: 7vh;
+        font-size: 2vmax;
+    }
+    .updateProfileBtn{
+        font-size: 2vmax;
+        padding: 2.4vmax;
+    }
+}
+  
+  
+  
+  

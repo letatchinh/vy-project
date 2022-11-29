@@ -1,0 +1,393 @@
+/*   --------------------------------------
+    |                BANNER                |                            
+     --------------------------------------
+*/
+/* Overview */
+.banner{
+    /* background-image: linear-gradient(45deg, #6D9886, #42855B); */
+    /* background-color:#6D9886; */
+    background-image: url(../../images/banner03.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vmin;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* To style featured products section display*/
+.banner::after{
+    content: '';
+    width: 98.9vw;
+    height: 100vmin;
+    /* background-color: #fff; */
+    background:rgb(0, 0, 0);
+    opacity: 0.5;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    /* clip-path: polygon(100% 68%, 0 100%, 100% 100%); */
+    /* clip-path: polygon(100% 68%, 100% 100%, 100% 100%); */
+    /* max-width: 100%; */
+}
+
+/* banner big title */
+.banner h1{
+    z-index: 2;
+    text-transform: uppercase;
+    margin-top: 4vmax;
+    margin-bottom: 4vmax;
+    letter-spacing: 6px;
+    font-family: "Mulish", sans-serif;
+    font-size: 4vmax;
+    font-weight: 600;
+    /* transform: translateY(-6rem); */
+    text-shadow: 2px 2px 10px #000;
+}
+/* banner text welcome */
+.banner p{
+    z-index: 2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2vmax;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px #000;
+    /* transform: translateY(-3rem); */
+}
+
+/* banner btn scroll */
+.banner a button{
+    margin-bottom: 5vmax;
+    cursor: pointer;
+    /* background-color: white; */
+    background-color: transparent;
+    /* border: 3px solid #6D9886; */
+    border: 3px solid #196B69;
+    color: #fff;
+    border-radius: 2px;
+    padding: 1vmax;
+    transition: all 0.5s;
+    width: 9vmax;
+    font-weight: 500;
+    font-size: 1vmax;
+    margin-top: 8vmax;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.5s ease-in-out;
+}
+.banner a button:hover{
+    background-color: #196B69;
+}
+/* .line{
+    z-index: 2;
+    width: 150px;
+    height: 4px;
+    background-color: #196B69;
+    margin: 10px auto;
+    border-radius: 5px;
+} */
+.scroll{
+    z-index: 2;
+}
+
+/*   --------------------------------------
+    |           FEATURED PRODUCTS          |                            
+     --------------------------------------
+*/
+/* Style text: Featured products */
+.homeHeading{
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 2.2vmax;
+    /* border-bottom: 1px solid rgba(21, 21, 21, 0.5); */
+    width: 40vmax;
+    padding: 1vmax;
+    margin-top: 8rem;
+    /* margin: 1vmax auto; */
+    margin-left: 2vmax;
+    text-transform: capitalize;
+}
+/* display products card */
+.container{
+    display: flex;
+    margin: 2vmax auto;
+    width: 80vw;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    justify-content: flex-start;
+    max-width: 100%;
+}
+/* Card overview */
+.productCard{
+    width: 15vmax;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+    margin: 2vmax;
+    transition: all 0.5s;
+    padding-bottom: 0.5vmax;
+}
+.productCard:hover{
+    box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+    transform: translateY(-1vmax);
+}
+/* Card img */
+.productCard > img{
+    width: 15vmax;
+}
+/* title of products */
+.productCard > p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3vmax;
+    margin: 1vmax 0.5vmax;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+/* Star + count reviews */
+.productCard > div{
+    margin: 0.5vmax;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* count reviews */
+.productCardSpan{
+    margin: 0.7vmax;
+    font-size: 0.7vmax;
+    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Product price */
+.productCard > span{
+    margin: 0.5vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1vmax;
+    font-weight: 600;
+}
+
+/*   --------------------------------------
+    |                BANNER                |                            
+     --------------------------------------
+*/
+.intro-container{
+    margin-bottom: 5rem;
+}
+.See_more,
+.See_more_01{
+    display: flex;
+    margin: 6rem 8rem;
+}
+.See_more .images div{
+    background-color: #196B69;
+    width: 40rem;
+    height: 30rem;
+    transform: translate(20px, 20px);
+    box-shadow: rgb(0 0 0 / 60%) 5px 14px 20px -5px;
+}
+.See_more_01 .images div{
+    background-color: #196B69;
+    width: 40rem;
+    height: 27rem;
+    transform: translate(-20px, 20px);
+    box-shadow: rgb(0 0 0 / 60%) 5px 14px 20px -5px;
+}
+.See_more img{
+    width: 40rem;
+    z-index: 2;
+    position: absolute;
+}
+.See_more_01 img{
+    width: 40rem;
+    height: auto;
+    z-index: 1;
+    position: absolute;
+}
+.See_more .content{
+    margin-right: 5rem;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+.See_more .content h1,
+.See_more_01 .content h1{
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    font-family: "Mulish", sans-serif;
+}
+.See_more .content p,
+.See_more_01 .content p{
+    text-align: justify;
+    margin-bottom: 4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.See_more .content a,
+.See_more_01 .content a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    border: 3px solid #196B69;
+    padding: 1.1rem 2rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s ease;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.See_more .content a:hover,
+.See_more_01 .content a:hover{
+    background-color: #196B69;
+    color: #fff;
+}
+.See_more_01{
+    margin-top: 10rem;
+}
+.See_more_01 .content{
+    margin-left: 5rem;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 600px){
+    .banner p{
+        font-size: 1.4vmax;
+        font-weight: 500;
+    }
+
+    .banner a button{
+        border-radius: 2px;
+        padding: 2.6vmax;
+        transition: all 0.5s;
+        width: 20vmax;
+        font-weight: 500;
+        font-size: 1.8vmax;
+        margin-top: 6vmax;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.5s ease-in-out;
+    }
+    /* .line{
+        width: 200px;
+    } */
+    .scroll{
+        transform: translateY(-3rem);
+    }
+    
+    .homeHeading{
+        font-size: 3vmax;
+        width: 40vmax;
+        padding: 1vmax;
+        margin-top: 2rem;
+        margin: 1vmax auto;
+        text-transform: capitalize;
+    }
+    .container{
+        display: flex;
+        margin: 2vmax auto;
+        width: 68vw;
+    }
+    .productCard{
+        margin: 2vmax;
+        transition: all 0.5s;
+        padding-bottom: 0.5vmax;
+    }
+
+    .productCard > span{
+        margin: 0.5vmax;
+        font-size: 1.4vmax;
+    }
+    /* title of products */
+    .productCard > p{
+        font-size: 1.5vmax;
+    }
+    /* Star + count reviews */
+    .productCard > div{
+        margin: 0vmax;
+        display: block;
+    }
+    /* count reviews */
+    .productCard > div > span{
+        margin: 0 0.5vmax;
+        font-weight: 300;
+        font-size: 1.2vmax;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .banner h1{
+        margin-top: 25vmax;
+        margin-bottom: 1.2vmax;
+        font-size: 5vmax;
+        font-weight: 600;
+        text-shadow: 2px 2px 10px #000;
+    }
+    
+    .See_more,
+    .See_more_01{
+        display: flex;
+        flex-direction: column;
+        margin: 3rem 4rem;
+    }
+    .See_more_01{
+        margin-top: 2rem;
+    }
+    .See_more .images div{
+        background-color: #6D9886;
+        width: 18rem;
+        height: 13.5rem;
+        transform: translate(-20px, 20px);
+        box-shadow: rgb(0 0 0 / 60%) 5px 14px 20px -5px;
+    }
+    .See_more_01 .images div{
+        background-color: #6D9886;
+        width: 18rem;
+        height: 13.5rem;
+        transform: translate(-20px, 20px);
+        box-shadow: rgb(0 0 0 / 60%) 5px 14px 20px -5px;
+        margin-bottom: 5rem;
+    }
+    .See_more img{
+        width: 18rem;
+        position: absolute;
+    }
+    .See_more_01 img{
+        width: 18rem;
+        height: auto;
+        z-index: 1;
+        position: absolute;
+    }
+    .images{
+        margin-top: 5rem;
+    }
+    .See_more .content{
+        margin-right: 0rem;
+        margin-top: 10px;
+    }
+    .See_more_01 .content{
+        margin-left: 0rem;
+        margin-top: 10px;
+    }
+    .See_more .content h1,
+    .See_more_01 .content h1{
+        font-size: 2rem;
+        margin-bottom: 0rem;
+    }
+    .See_more .content p,
+    .See_more_01 .content p{
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
+    .See_more .content a,
+    .See_more_01 .content a{
+        font-size: 14px;
+        padding: 0.8rem 1.2rem;
+    }
+}

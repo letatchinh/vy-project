@@ -1,0 +1,77 @@
+.searchBox {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(231, 231, 231); */
+    /* background-color: #196B69; */
+    background-image: linear-gradient(to bottom right,rgb(25, 107, 105),rgb(221, 254, 228));
+    /* position: fixed; */
+}
+.searchBox > input[type="text"] {
+    height: 8%;
+    border-radius: 0%;
+    background-color: white;
+    border: none;
+    padding: 1.5vmax 2vmax;
+    width: 50%;
+    font-weight: 300;
+    font-size: 1.1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* color: rgba(0, 0, 0, 0.637); */
+    color: black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.274);
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    transform: translateY(-6rem);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.searchBox > input[type="submit"] {
+    height: 8%;
+    /* background-color: #6D9886; */
+    background-color: white;
+    border: none;
+    padding: 1vmax;
+    width: 10%;
+    font-weight: 300;
+    font-size: 1.1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    /* color: white; */
+    color: #196B69;
+    transition: all 0.5s;
+    transform: translateY(-6rem);
+    text-transform: uppercase;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.274);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.searchBox > input[type="submit"]:hover {
+    /* background-color: rgb(197, 68, 45); */
+    scale: 1.02;
+    font-weight: 400;
+}
+
+
+  @media screen and (max-width: 600px) {
+    .searchBox > input[type="text"] {
+      width: 60%;
+      font-weight: 300;
+      font-size: 4vw;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      height: 10%;
+    }
+  
+    .searchBox > input[type="submit"] {
+      font-weight: 500;
+      font-size: 4vw;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      height: 10%;
+      width: 30%;
+    }
+  }
+  

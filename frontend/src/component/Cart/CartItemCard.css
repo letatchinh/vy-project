@@ -1,0 +1,69 @@
+/* Overview */
+.CartItemCard{
+    display: flex;
+    padding: 1vmax;
+    height: 8vmax;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+.CartItemCard > div{
+    display: flex;
+    margin: 0.3vmax 1vmax;
+    flex-direction: column;
+}
+.CartItemCard > img{
+    width: 6vmax;
+}
+/* item name */
+.CartItemCard > div > a{
+    font-weight: 500;
+    font-size: 1.2vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* color: rgba(24, 24, 24, 0.815); */
+    color: black;
+    text-decoration: none;
+}
+/* Price */
+.CartItemCard > div > span{
+    font-weight: 300;
+    font-size: 0.9vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(24, 24, 24, 0.815);
+    margin: 0.8vmax 0;
+}
+/* Text remove */
+.CartItemCard > div > p{
+    color: #6D9886;
+    font-weight: 100;
+    font-size: 0.8vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+    /* Overview */
+    .CartItemCard{
+        padding: 3vmax;
+        height: 25vmax;
+    }
+    .CartItemCard > img{
+        width: 10vmax;
+    }
+    .CartItemCard > div{
+      margin: 1vmax 2vmax;
+    }
+    /* item name */
+    .CartItemCard > div > a{
+        font-weight: 600;
+        font-size: 2.2vmax;
+    }
+    .CartItemCard > div > span{
+        font-weight: 300;
+        font-size: 2vmax;
+      }
+    
+    .CartItemCard > div > p{
+        font-weight: 100;
+        font-size: 1.6vmax;
+    }
+}

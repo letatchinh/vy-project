@@ -1,0 +1,160 @@
+/*   --------------------------------------
+    |              OVERVIEW                |                            
+     --------------------------------------
+*/
+.profileContainer {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    /* position: fixed; */
+    top: 10%;
+    left: 0%;
+    max-width: 100%;
+    background-image: linear-gradient(
+      to bottom right,
+      rgb(25, 107, 105),
+      rgb(221, 254, 228)
+    );
+}
+/* Position */
+.profileContainer > div {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Title: My Profile */
+.profileContainer > div:first-child > h1 {
+    /* color: rgba(0, 0, 0, 0.555); */
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+    font-weight: 600;
+    font-size: 2.2vmax;
+    font-family: "Mulish", sans-serif;
+    transform: translateX(-10vmax) translateY(-2vmax);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+/* Image */
+.profileContainer > div:first-child > img {
+    width: 20vmax;
+    border-radius: 100%;
+    transition: all 0.5s;
+}
+.profileContainer > div:first-child > img:hover {
+    transform: scale(1.05);
+}
+/* Edit Profile */
+.profileContainer > div:first-child > a {
+    font-size: 1.2vmax;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #196B69;
+    text-decoration: none;
+    padding: 0.6vmax;
+    width: 30%;
+    margin: 4vmax;
+    text-align: center;
+    transition: all 0.5s;
+    background-color: white;
+    /* border: 2px solid #196B69; */
+    text-transform: capitalize;
+}
+.profileContainer > div:first-child > a:hover {
+    /* background-color: #196B69;
+    color: white; */
+    scale: 1.05;
+}
+/* Options */
+.profileContainer > div:last-child {
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 5vmax;
+    box-sizing: border-box;
+}
+/* My orders + Last Child */
+.profileContainer > div:last-child > div:last-child {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.profileContainer > div:last-child > div:last-child > a {
+    /* border: 2px solid #196B69; */
+    background-color: white;
+    font-weight: 400;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #196B69;
+    text-decoration: none;
+    padding: 0.8vmax;
+    text-align: center;
+    transition: all 0.5s;
+    margin: 1vmax 0;
+}
+.profileContainer > div:last-child > div:last-child > a:hover {
+    /* background-color: #196B69;
+    color: white; */
+    scale: 1.05;
+}
+/* Options title */
+.profileContainer > div:last-child > div > h4 {
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+    font-weight: 600;
+    font-size: 1.5vmax;
+    font-family: "Mulish", sans-serif;
+    text-transform: uppercase;
+}
+/* Options content */
+.profileContainer > div:last-child > div > p {
+    /* color: rgba(0, 0, 0, 0.418); */
+    color: rgb(255, 255, 255, 0.8);
+    font-weight: 400;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0.2vmax;
+}
+
+@media screen and (max-width: 600px) {
+    /* Position */
+    .profileContainer {
+      flex-direction: column;
+    }
+    /* Title: My Profile */
+    .profileContainer > div:first-child > h1 {
+        font-size: 3.6vmax;
+        transform: translateY(-2vmax);
+    }
+    /* Edit btn */
+    .profileContainer > div:first-child > a {
+        font-size: 1.7vmax;
+        padding: 1.6vmax;
+    }
+    /* OPTIONS */
+    .profileContainer > div:last-child {
+        text-align: center;
+        align-items: center;
+        transform: translateY(-18%);
+    }
+    .profileContainer > div:last-child > div{
+        margin: 0.4rem 0;
+    }
+    /* Options title */
+    .profileContainer > div:last-child > div > h4 {
+        font-size: 2.8vmax;
+    }
+    /* Options content */
+    .profileContainer > div:last-child > div > p {
+        font-size: 1.8vmax;
+        margin: 0.5vmax 0;
+    }
+    /* My order + Change password btn */
+    .profileContainer > div:last-child > div:last-child > a {
+        font-size: 1.8vmax;
+        padding: 1.4vmax;
+        margin: 2vmax 0;
+    }
+}

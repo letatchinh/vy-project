@@ -1,0 +1,142 @@
+.dashboard {
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    position: absolute;
+}
+.dashboardContainer {
+    border-left: 1px solid rgba(0, 0, 0, 0.13);
+    background-color: rgb(255, 255, 255);
+    padding: 3rem 0;
+}
+/* Title */
+.dashboardContainer > h1 {
+    /* color: rgba(0, 0, 0, 0.733); */
+    color: #132F2B;
+    font-weight: 600;
+    font-size: 2.5rem;
+    font-family: "Mulish", sans-serif;
+    text-align: center;
+    width: 50%;
+    padding: 0.6rem;
+    margin: auto;
+    text-transform: uppercase;
+}
+/* Content */
+.dashboardSummary {
+    margin: 2rem 0;
+}
+/* content Position */
+.dashboardSummary > div {
+    display: flex;
+    /* background-color: white; */
+    justify-content: space-evenly;
+}
+/* Total Amount */
+.dashboardSummary > div > p {
+    /* background-color: rgba(70, 117, 218, 0.932); */
+    background-color: #393E46;
+    color: white;
+    font-weight: 300;
+    font-size: 1.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+    margin: 0 2rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px #000;
+}
+/* Options title */
+.dashboardSummaryBox2 > a {
+    /* color: rgb(0, 0, 0); */
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: "Mulish", sans-serif;
+    text-align: center;
+    /* background-color: rgb(255, 233, 174); */
+    background-color: #196B69;
+    /* border: 4px solid #196B69; */
+    text-decoration: none;
+    padding: 1.5rem;
+    width: 8vmax;
+    height: 8vmax;
+    margin: 2rem;
+    border-radius: 100%;
+    /* border-radius: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 6px 10px rgb(0 0 0 / 60%);
+}
+.dashboardSummaryBox2 > a:first-child {
+    /* background-color: rgb(255, 110, 110); */
+    background-color: #28CC9E;
+    color: rgb(255, 255, 255);
+}
+.dashboardSummaryBox2 > a:last-child {
+    background-color: #132F2B;
+    color: rgb(255, 255, 255);
+}
+.lineChart_Heading,
+.doughnutChart_Heading{
+    font-family: "Mulish", sans-serif;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+.doughnutChart_Heading{
+    transform: translateX(-16rem);
+    margin-top: 2rem;
+}
+.lineChart {
+    padding-top: 2vmax;
+    width: 80%;
+    margin: auto;
+}
+.doughnutChart {
+    width: 30vmax;
+    margin: auto;
+    padding-top: 4vmax;
+}
+
+@media screen and (max-width: 600px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+    .dashboardContainer {
+        border-left: none;
+    }
+    .dashboardContainer > h1 {
+        text-align: center;
+        padding: 0.6rem;
+        margin-left: 4rem;
+    }
+    .doughnutChart_Heading {
+        transform: translateX(-3rem);
+        margin-top: 2rem;
+    }
+    .lineChart_Heading, .doughnutChart_Heading {
+        font-size: 1.2rem;
+    }
+    .dashboardSummary > div > p {
+        margin: 0;
+    }
+    .dashboardSummaryBox2 > a {
+        padding: 0.5rem;
+        margin: 1rem;
+        font-size: 0.9rem;
+    }
+    .dashboardSummaryBox2 > a {
+        font-size: 1rem;
+        font-weight: 300;
+        text-align: center;
+        text-decoration: none;
+        width: 9vmax;
+        height: 9vmax;
+        margin: 1.8rem;
+        border-radius: 100%;
+    }
+}

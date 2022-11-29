@@ -1,0 +1,91 @@
+/* Overview */
+.myOrdersPage {
+    width: 100vw;
+    max-width: 100%;
+    /* padding: 0 7vmax; */
+    padding: 0 14vmax;
+    box-sizing: border-box;
+    /* background-color: rgb(235, 235, 235); */
+    /* position: fixed; */
+    /* top: 0; */
+    background-image: linear-gradient(
+      to bottom right,
+      rgb(25, 107, 105),
+      rgb(221, 254, 228)
+    );
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Title {user.name}'s Orders */
+#myOrdersHeading {
+    text-align: center;
+    font-weight:600;
+    font-size: 1.2vmax;
+    font-family: "Mulish", sans-serif;
+    padding: 2vmax;
+    box-sizing: border-box;
+    /* color: rgb(255, 255, 255); */
+    color: #000;
+    transition: all 0.5s;
+    /* background-color: rgb(44, 44, 44); */
+}
+/* Table overview */
+.myOrdersTable {
+    background-color: white;
+}
+/* Content */
+.myOrdersTable div {
+    font-weight: 300;
+    font-size: 0.8vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* color: rgba(0, 0, 0, 0.678); */
+    color: #000;
+    border: none;
+}
+/* view detail */
+.myOrdersTable a {
+    /* color: rgba(0, 0, 0, 0.527); */
+    color: #000;
+    transition: all 0.5s;
+}
+.myOrdersTable a:hover {
+    /* color: #6D9886; */
+    scale: 1.05;
+}
+/* Header overview */
+.MuiDataGrid-columnHeader {
+    background-color: #196B69;
+    padding: 1vmax !important;
+}
+/* Header title */
+.MuiDataGrid-columnHeader div {
+    color: rgb(255, 255, 255);
+    font-weight: 600 !important;
+    font-size: 1vmax;
+    font-family: "Mulish", sans-serif;
+    text-transform: capitalize;
+}
+/* Line in heading */
+.MuiDataGrid-iconSeparator {
+    display: none !important;
+}
+
+@media screen and (max-width: 600px) {
+    .myOrdersPage {
+        padding: 0;
+        height: 93vh;
+    }
+    #myOrdersHeading {
+        font-size: 2.2vmax;
+        padding: 4vw;
+    }
+    .myOrdersTable div {
+        font-size: 4vw;
+    }
+    .MuiDataGrid-columnHeader {
+        padding: 20px !important;
+    }
+
+}

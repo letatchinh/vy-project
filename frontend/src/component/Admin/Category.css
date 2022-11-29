@@ -1,0 +1,21 @@
+.CContainer{
+    background-color: white;
+}
+#categoryListHeading{
+    font-weight: 400;
+    font-size: 2rem;
+    font-family: "Mulish", sans-serif;
+    padding: 0.5vmax;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.637);
+    transition: all 0.5s;
+    margin: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.MuiDataGrid-columnHeader div {
+    color: rgb(255, 255, 255);
+    font-weight: 600 !important;
+    font-family: "Mulish", sans-serif;
+    text-transform: capitalize;
+}

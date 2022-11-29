@@ -1,0 +1,119 @@
+/* Position */
+.shippingContainer{
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-2vmax);
+}
+.shippingBox{
+    background-color: white;
+    width: 25vw;
+    height: 90vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.shippingForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+    justify-content: space-evenly;
+    height: 90%;
+    transition: all 0.5s;
+    transform: translateY(-1vmax);
+}
+.shippingHeading{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.7vmax;
+    font-family: "Mulish", sans-serif;
+    padding: 2vmax;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    width: 70%;
+    margin: auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.shippingForm > div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.shippingForm > div > input,
+.shippingForm > div > select{
+    padding: 1vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 0.85vmax;
+    outline: none;
+}
+.shippingForm > div > svg{
+    position: absolute;
+    transform: translateX(1vmax);
+    font-size: 1.6vmax;
+    /* color: rgba(0, 0, 0, 0.623); */
+    color: #196B69;
+}
+.shippingBtn{
+    /* color: #196B69;
+    background-color: white;
+    border: 2px solid #196B69; */
+    background-color: #196B69;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    padding: 1vmax;
+    cursor: pointer;
+    transition: all 0.5s;
+    outline: none;
+    margin: 1vmax 2vmax;
+    text-transform: uppercase;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+.shippingBtn:hover{
+    /* background-color: #196B69;
+    color: white; */
+    scale: 1.05;
+}
+
+@media screen and (max-width: 600px){
+    .shippingBox{
+      width: 100vw;
+      height: 100vh;
+    }
+    .shippingHeading{
+        font-size: 6vw;
+        padding: 5vw;
+    }
+    .shippingForm{
+        padding: 11vw;
+        transform: translateY(-4vmax);
+    }
+    .shippingForm > div > input,
+    .shippingForm > div > select{
+        padding: 5vw 12vw;
+        font-size: 3.6vw;
+    }
+    .shippingForm > div > svg{
+        font-size: 6vw;
+        transform: translateX(3vw);
+    }
+    .shippingBtn{
+        font-size: 4vw;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 4vw;
+    }
+}

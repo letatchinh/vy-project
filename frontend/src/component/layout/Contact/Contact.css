@@ -1,0 +1,41 @@
+.contactContainer {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    place-items: center;
+    /* background-color: white; */
+    background-image: linear-gradient(
+      to bottom right,
+      /* rgb(78, 81, 255),
+      rgb(74, 137, 189) */
+      rgb(25, 107, 105),
+      rgb(221, 254, 228)
+    );
+    position: fixed;
+  }
+  
+  .mailBtn {
+    text-decoration: none;
+    transform: translateX(-100vw);
+    animation: mailBtnAnimation 2s forwards;
+  }
+  
+  .mailBtn > button {
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 2vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 2vmax;
+    transform: translateY(-3rem);
+  }
+  .mailBtn > button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+@keyframes mailBtnAnimation {
+    to {
+      transform: translateX(0);
+    }
+}
+  

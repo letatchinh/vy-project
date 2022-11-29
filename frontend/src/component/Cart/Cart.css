@@ -1,0 +1,255 @@
+/*   --------------------------------------
+    |              OVERVIEW                |                            
+     --------------------------------------
+*/
+.cartPage {
+    padding: 4vmax 12vmax;
+}
+/*   --------------------------------------
+    |               HEADER                 |                            
+     --------------------------------------
+*/
+.cartHeader{
+    background-color: #196B69;
+    width: 90%;
+    box-sizing: border-box;
+    margin: auto;
+    color: white;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    font-size: 1vmax;
+    font-weight: 300;
+    font-family: "Mulish", sans-serif;
+    text-transform: uppercase;
+}
+.cartHeader > p{
+    margin: 10px;
+}
+.cartHeader > p:last-child{
+    text-align: end;
+}   
+
+/*   --------------------------------------
+    |               CONTENT                |                            
+     --------------------------------------
+*/
+/* Overview */
+.cartContainer {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+}
+/* Range quantity */
+.cartInput {
+    display: flex;
+    align-items: center;
+    height: 8vmax;
+}
+.cartInput > button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.616);
+    padding: 0.4vmax;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.cartInput > button:hover {
+    background-color: rgba(0, 0, 0, 0.767);
+}
+/* Quantity value */
+.cartInput > input {
+    border: none;
+    padding: 0.5vmax;
+    width: 1vmax;
+    text-align: center;
+    outline: none;
+    font-weight: 400;
+    font-size: 0.8vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(0, 0, 0, 0.74);
+}
+/* subtotal */
+.cartSubtotal {
+    display: flex;
+    padding: 0.5vmax;
+    height: 8vmax;
+    align-items: center;
+    box-sizing: border-box;
+    font-weight: 300;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: flex-end;
+    color: rgba(0, 0, 0, 0.753);
+}
+
+/*   --------------------------------------
+    |             FOOTER TOTAL             |                            
+     --------------------------------------
+*/
+.cartGrossProfit {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+}
+/* Profit + price */
+.cartGrossProfitBox {
+    border-top: 3px solid #6D9886;
+    margin: 1vmax 4vmax;
+    box-sizing: border-box;
+    padding: 2vmax 0;
+    font-weight: 300;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+/* Button */
+.checkOutBtn {
+    display: flex;
+    justify-content: flex-end;
+}
+.checkOutBtn > button {
+    color: #196B69;
+    background-color: white;
+    border: 2px solid #196B69;
+    padding: 0.8vmax 4vmax;
+    width: 70%;
+    font-weight: 800;
+    font-size: 0.9vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1vmax 4vmax;
+    cursor: pointer;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+.checkOutBtn > button:hover{
+    background-color: #196B69;
+    color: white;
+}
+
+/*   --------------------------------------
+    |               EMPTY CART             |                            
+     --------------------------------------
+*/
+.emptyCart {
+    margin: auto;
+    text-align: center;
+    padding: 10vmax;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.emptyCart > svg {
+    font-size: 5vmax;
+    color: #196B69;
+}
+.emptyCart > p {
+    font-size: 2vmax;
+    padding: 1rem 0;
+}
+.emptyCart > a {
+    padding: 1vmax 3vmax;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    color: #196B69;
+    background-color: white;
+    border: 2px solid #196B69;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+.emptyCart > a:hover{
+    background-color: #196B69;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    /* Overview */
+    .cartPage {
+        padding: 0;
+        min-height: 62vh;
+    }
+    /* Header */
+    .cartHeader {
+        width: 100%;
+        font-weight: 300;
+        font-size: 2vmax;
+        grid-template-columns: 3fr 1fr 1fr;
+    }
+    /* Content overview */
+    .cartContainer {
+        width: 100%;
+        grid-template-columns: 3fr 1fr 1fr;
+    }
+    /* Range quantity */
+    .cartInput {
+        height: 20vmax;
+    }
+    .cartInput > button {
+        padding: 1vmax;
+    }
+    .cartInput > input {
+        width: 2vmax;
+        padding: 1.5vmax;
+        font-size: 1.9vmax;
+        font-weight: 400;
+    }
+    /* subtotal */
+    .cartSubtotal {
+        padding: 1.5vmax;
+        height: 20vmax;
+        font-weight: 300;
+        font-size: 2.4vmax;
+    }
+    /* Profit overview */
+    .cartGrossProfit {
+        display: grid;
+        grid-template-columns: 0fr 2fr;
+    }
+    /* Profit + price */
+    .cartGrossProfitBox {
+        padding: 3vmax;
+        font-size: 2.6vmax;
+        font-weight: 300;
+    }
+    .checkOutBtn > button {
+        padding: 2vmax 4vmax;
+        width: 100%;
+        font-size: 1.9vmax;
+    }
+}
+/* .emptyCart {
+    margin: auto;
+    text-align: center;
+    padding: 10vmax;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .emptyCart > svg {
+    font-size: 5vmax;
+    color: #6D9886;
+  }
+  .emptyCart > p {
+    font-size: 2vmax;
+  }
+  .emptyCart > a {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    padding: 1vmax 3vmax;
+    cursor: pointer;
+    font: 400 1vmax "Roboto";
+    text-decoration: none;
+  }
+   */

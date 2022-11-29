@@ -1,0 +1,109 @@
+/* Position */
+.speedDial {
+    position: fixed;
+    right: 3vmax;
+    top: 3vmax;
+  }
+
+.speedDialIcon {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li{
+  list-style: none;
+  padding: 0 3rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-family: "Mulish", sans-serif;
+}
+.navbar{
+  height: 10vh;
+  line-height: 10vh;
+  box-shadow: rgba(50, 50, 50, 0.23) 0 30px 30px -20px;
+}
+.logo{
+  width: 8rem;
+  height: auto;
+}
+.nav-links-mobile{
+  display: flex;
+  justify-content: center;
+  width: 75%;
+}
+.nav-links-mobile li{
+  color: black;
+  font-size: 1.1rem;
+  padding: 0 25px;
+  margin: 0 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.nav-links a,
+.nav-links-mobile a{
+  text-decoration: none;
+  color: black;
+}
+.nav-links {
+  display: flex;
+}
+.nav-right li{
+  padding: 0 4px;
+  margin: 0 10px;
+  font-size: 1.6rem;
+
+}
+.c_container{
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border: none;
+  background-color: none;
+  font-size: 20px;
+}
+.mobile-menu-icon{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links{
+    display: none;
+  }
+  .nav-links-mobile{
+    position: absolute;
+    display: block;
+    list-style: none;
+    box-shadow: rgba(50, 50, 50, 0.23) 0 30px 30px -20px;
+    top: 10%;
+    left: 0;
+    transition: all 0.5 ease-in-out;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+  }
+  ul li{
+    padding: 32px;
+    width: 100%;
+    transition: all 0.5 ease-in-out;
+    text-align: center;
+  }
+  .mobile-menu-icon{
+    position: absolute;
+    display: block;
+    left: 11rem;
+    top: 1.3rem;
+    background-color: white;
+  }
+
+}

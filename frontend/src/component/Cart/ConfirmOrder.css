@@ -1,0 +1,261 @@
+/*   --------------------------------------
+    |              OVERVIEW                |                            
+     --------------------------------------
+*/
+.confirmOrderPage{
+    height: 100vh;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+}
+/* Order Summary */
+.confirmOrderPage > div:last-child{
+    border-left: 1px solid rgba(0, 0, 0, 0.247);
+}
+/* Box position */
+.confirmshippingAreaBox,
+.confirmCartItemsContainer{
+    margin: 2vmax;
+}
+
+/*   --------------------------------------
+    |             CONFIRM INFO             |                            
+     --------------------------------------
+*/
+.confirms .confirmshippingArea{
+    padding: 2vmax;
+    padding-left: 14vmax;
+    padding-right: 4vmax;
+    padding-bottom: 0%;
+}
+/* title */
+.confirms .confirmshippingArea > p{
+    font-weight: 600;
+    font-size: 2vmax;
+    font-family: "Mulish", sans-serif;
+    text-transform: uppercase;
+}
+/* Options position */
+.confirmshippingAreaBox > div{
+    display: flex;
+    margin: 2vmax 0;
+}
+/* Options title */
+.confirmshippingAreaBox > div > p{
+    font-weight: 600;
+    font-size: 1vmax;
+    font-family: "Mulish", sans-serif;
+    color: black;
+}
+/* Options content */
+.confirmshippingAreaBox > div > span{
+    margin: 0 1vmax;
+    font-weight: 100;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #575757;
+}
+
+/*   --------------------------------------
+    |               CART INFO              |                            
+     --------------------------------------
+*/
+/* Overview */
+.confirmCartItems{
+    /* padding: 4vmax; */
+    padding-top: 2vmax;
+}
+/* Title */
+.confirmCartItems > p{
+    font-weight: 600;
+    font-size: 1.6vmax;
+    font-family: "Mulish", sans-serif;
+    text-transform: uppercase;
+}
+/* Content position */
+.confirmCartItemsContainer{
+    max-height: 40vmax;
+    overflow-y: auto;
+}
+/* Img + price position */
+.confirmCartItemsContainer > div{
+    display: flex;
+    font-weight: 400;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 2vmax 0; */
+    margin-bottom: 2vmax;
+}
+/* Img */
+.confirmCartItemsContainer > div > img{
+    width: 5vmax;
+}
+/* Product name */
+.confirmCartItemsContainer > div > a{
+    /* color: #575757; */
+    color: black;
+    margin: 0 1vmax;
+    width: 50%;
+    text-decoration: none;
+}
+/* Quantity * price */
+.confirmCartItemsContainer > div > span{
+    font-weight: 200;
+    font-size: 0.9vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* color: #5e5e5e; */
+    color: black;
+}
+
+/*   --------------------------------------
+    |            ORDER SUMMARY             |                            
+     --------------------------------------
+*/
+/* Overview */
+.orderSummary{
+    padding: 7vmax;
+    padding-top: 1vmax;
+}
+/* Title */
+.orderSummary > p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 2vmax;
+    font-family: "Mulish", sans-serif;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+    padding: 2vmax 0;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+/* Options position */
+.orderSummary > div > div{
+    display: flex;
+    font-weight: 300;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: space-between;
+    margin: 3vmax 0;
+}
+/* summary price */
+.orderSummary > div > div > span{
+    color: #000;
+}
+/* Total */
+.orderSummaryTotal{
+    display: flex;
+    font-weight: 300;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.363);
+    padding: 2vmax 0;
+}
+/* Payment btn */
+.orderSummary > button{
+    /* color: #196B69;
+    background-color: white;
+    border: 2px solid #196B69; */
+    color: white;
+    background-color: #196B69;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 1vmax;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 400;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+.orderSummary > button:hover{
+    /* background-color: #196B69;
+    color: white; */
+    scale: 1.05;
+}
+
+@media screen and (max-width: 600px){
+    .confirmOrderPage{
+      grid-template-columns: 1fr;
+      height: unset;
+    }
+    /* Order Summary */
+    .confirmOrderPage > div:last-child{
+        border-left: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.247);
+    }
+    .confirms .confirmshippingArea{
+        padding: 2vmax;
+        padding-left: 4vmax;
+        padding-right: 4vmax;
+        padding-bottom: 0%;
+    }
+    /* title */
+    .confirms .confirmshippingArea > p{     
+        font-size: 6vw;
+    }
+    /* Options position */
+    .confirmshippingAreaBox > div{
+        display: flex;
+        margin: 6vw 0;
+    }
+    /* Options title */
+    .confirmshippingAreaBox > div > p{
+        font-size: 4.2vw;
+    }
+    /* Options content */
+    .confirmshippingAreaBox > div > span{
+        font-size: 4vw;
+    }
+    /* Your cart items heading */
+    .confirmCartItems > p{
+        font-size: 5vw;
+    }
+    /* Content position */
+    .confirmCartItemsContainer{
+        max-height: 50vw;
+    }
+    /* Img + product name position */
+    .confirmCartItemsContainer > div{
+        font-size: 3.5vw;
+        margin: 4vw 0;
+    }
+    .confirmCartItemsContainer > div > img{
+        width: 12vw;
+    }
+    /* price */
+    .confirmCartItemsContainer > div > a{
+        margin: 0;
+        width: 30%;
+    }
+    .confirmCartItemsContainer > div > span{
+        font-size: 3vw;
+    }  
+    .orderSummary{
+        padding: 12vw;
+    }
+    .orderSummary > p{
+        font-size: 7vw;
+        padding: 6vw;
+    }
+    .orderSummary > div > div{
+        font-size: 3.5vw;
+        margin: 4vmax 0;
+    }
+    .orderSummaryTotal{
+        font-size: 4vw;
+        padding: 5vw 0;
+    }
+    .orderSummary > button{
+        padding: 3.5vw;
+        margin: 10vw auto;
+        font-size: 3.5vw;
+        font-weight: 600;
+    }
+}

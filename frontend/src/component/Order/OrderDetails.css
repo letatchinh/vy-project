@@ -1,0 +1,148 @@
+/* .orderDetailsPage {
+    background-color: white;
+} */
+.orderDetailsPage{
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+}
+.orderDetailsContainer > h1 {
+    font-size: 3vmax;
+    font-weight: 300;
+    font-family: "Mulish", sans-serif;
+    margin: 2vmax 0;
+    color: #196B69;
+}
+/* Content overview */
+.orderDetailsContainer {
+    padding: 2vmax;
+    padding-bottom: 0%;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+}
+/* Options title */
+.orderDetailsContainer > p {
+    font-weight: 600;
+    font-size: 1.8vmax;
+    font-family: "Mulish", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 4rem;
+}
+/* content */
+.orderDetailsContainerBox,
+.orderDetailsCartItemsContainer {
+    margin: 2vmax;
+    margin-left: 2rem;
+}
+/* Options */
+.orderDetailsContainerBox > div {
+    display: flex;
+    margin: 1.5vmax 0;
+    margin-left: 4rem;
+}
+/* Options content title*/
+.orderDetailsContainerBox > div > p {
+    font-weight: 600;
+    font-size: 1vmax;
+    font-family: "Mulish", sans-serif;
+    color: black;
+}
+/* Options content*/
+.orderDetailsContainerBox > div > span {
+    margin: 0 1vmax;
+    font-weight: 100;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #575757;
+}
+/* Title: Order Items */
+.orderDetailsCartItems > p {
+    margin-top: 12.3rem;
+    font-weight: 600;
+    font-size: 1.8vmax;
+    font-family: "Mulish", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.orderDetailsCartItems {
+    padding: 2vmax 0vmax;
+    margin-right: 2rem;
+    /* border-top: 1px solid rgba(0, 0, 0, 0.164); */
+}
+/* Product name */
+.orderDetailsCartItemsContainer > div {
+    display: flex;
+    font-weight: 400;
+    font-size: 1vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    margin: 2vmax 0;
+}
+.orderDetailsCartItemsContainer > div > img {
+    width: 5vmax;
+}
+/* Product + price */
+.orderDetailsCartItemsContainer > div > a {
+    /* color: #575757; */
+    color: #000;
+    margin: 0 2vmax;
+    width: 50%;
+    text-decoration: none;
+}
+/* Price */
+.orderDetailsCartItemsContainer > div > span {
+    font-weight: 300;
+    font-size: 0.9vmax;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* color: #5e5e5e; */
+    color: #000;
+}
+
+@media screen and (max-width: 600px) {
+    .orderDetailsPage{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .orderDetailsContainer {
+        padding: 2vmax;
+        padding-bottom: 0%;
+        margin-left: 1rem;
+        margin-bottom: 2rem;
+    }
+    .orderDetailsContainer > p {
+        margin-left: 0rem;
+        font-size: 5.5vw;
+    }
+    .orderDetailsContainerBox > div {
+        margin: 5vw 0;
+    }
+    .orderDetailsContainerBox > div > p {
+        font-size: 4vw;
+    }
+    .orderDetailsContainerBox > div > span {
+        font-size: 4vw;
+    }
+    .orderDetailsCartItems{
+        border-top: 1px solid rgba(0, 0, 0, 0.164);
+        margin-right: 0rem;
+    }
+    .orderDetailsCartItems > p {
+        margin-top: 0rem;
+        margin-left: 2rem;
+        font-size: 6vw;
+    }
+    .orderDetailsCartItemsContainer > div {
+        font-size: 3.5vw;
+        margin: 4vw 0;
+    }
+    .orderDetailsCartItemsContainer > div > img {
+        width: 10vw;
+    }
+    .orderDetailsCartItemsContainer > div > a {
+        margin: 2vw;
+        width: 50%;
+    }
+    .orderDetailsCartItemsContainer > div > span {
+        font-size: 3.5vw;
+    }
+}
