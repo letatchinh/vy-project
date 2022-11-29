@@ -57,8 +57,8 @@ const ConfirmOrder = () => {
                         <div className="confirmCartItems">
                             <Typography>Your Cart Items:</Typography>
                             <div className="confirmCartItemsContainer">
-                                {cartItems &&
-                                    cartItems.map((item) => (
+                                {listCarts &&
+                                    listCarts.map((item) => (
                                     <div key={item.product}>
                                         <img src={item.image} alt="Product" />
                                         <Link to={`/product/${item.product}`}>

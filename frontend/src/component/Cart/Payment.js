@@ -95,6 +95,10 @@ const Payment = () => {
                         status: result.paymentIntent.status,
                     };
                     dispatch(createOrder(order));
+                    const newUser = {...user,listCarts : []}
+                    await axios.put("/api/v1/addToCart",newUser).then(res => {
+                        dispatch({type : "ADD_TO_CART_USER",payload : res.data.user})
+                      })
                     navigate("/success");
                 } else {
                     alert.error("There's some issue while processing payment ");

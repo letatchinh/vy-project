@@ -14,7 +14,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const UserOptions = ({user}) => {
     const { cartItems } = useSelector((state) => state.cart);
-
+    console.log(user);
     const [open, setOpen] = useState(false);
     const alert = useAlert();
     const dispatch = useDispatch();
@@ -32,7 +32,7 @@ const UserOptions = ({user}) => {
         { icon: <ExitToAppIcon />, name: "Logout", func: logoutUser }
     ];
 
-    if(user.role === "admin" || "staff"){
+    if(user.role !== "user"){
         options.unshift({ 
             icon: <DashboardIcon />, 
             name: "Dashboard", 
